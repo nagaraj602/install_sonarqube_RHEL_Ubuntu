@@ -6,7 +6,7 @@ echo "Installing SonarQube on $distro.."
 if [ "$distro" == "rhel" ] || [ "$distro" == "amzn" ]; then
 	sudo yum update -y > /dev/null 2>&1
 	sudo yum install wget unzip java-25-openjdk -y > /dev/null 2>&1
-
+	sudo yum install java-25-amazon-corretto -y > /dev/null 2>&1
 
 elif [ "$distro" == "ubuntu" ]; then
 	sudo apt-get update -y > /dev/null 2>&1
