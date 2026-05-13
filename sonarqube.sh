@@ -3,7 +3,7 @@ distro=$(cat /etc/os-release | grep "^ID=" | cut -d "=" -f2 | sed 's/"//g')
 
 echo "Installing SonarQube on $distro.."
 
-if [ "$distro" == "rhel" ]; then
+if [ "$distro" == "rhel" ] || [ "$distro" == "amzn" ]; then
 	sudo yum update -y > /dev/null 2>&1
 	sudo yum install wget unzip java-25-openjdk -y > /dev/null 2>&1
 
